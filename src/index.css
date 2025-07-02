@@ -1,0 +1,46 @@
+/* ===== index.css: CSSリセット & ベーススタイル ===== */
+
+/* すべてのマージン・パディングをリセット */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* HTML・BODY要素の基本スタイル */
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: sans-serif;
+  background-color: #fff;
+  color: #000;
+}
+
+/* 画像などのブロック要素をデフォルトで表示 */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* インプット要素のフォント継承 */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* ボタンなどのデフォルトスタイルをリセット */
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* リンクの下線や色のリセット */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* リストのスタイルをリセット */
+ul, ol {
+  list-style: none;
+}

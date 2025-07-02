@@ -1,0 +1,28 @@
+/*@2: 横並びにしたい時はflex-direction: rowのレイアウトの入った下記のような.level2Containerというクラスをjsxファイル内のタグで呼び出せばOK*/
+.level2Container {
+  display: flex;
+  flex-direction: row;       /* 横並びに変更 */
+  align-items: center;       /* 垂直方向中央 */
+  justify-content: center;   /* 水平方向中央 */
+  gap: 20px;                 /* ボタン間の余白 */
+  height: 100vh;             /* 全画面高さ */
+  background-color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/*@2: ボタンのスタイルを統一するために共通のクラスを作成*/
+.button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/*@2: ボタンの上にカーソルを持っていった際のスタイル変更*/
+.button:hover {
+  background-color: #0056b3;
+}

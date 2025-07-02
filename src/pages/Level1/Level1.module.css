@@ -1,0 +1,34 @@
+/* Level1.module.css */
+/*@1:下記は.level1Containerのクラスでjsxファイル内の方でこのクラスは呼び出して活用する*/
+.level1Container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  /* 縦方向中央 */
+  align-items: center;      /* 横方向中央 */
+  height: 100vh;            /* 全画面の高さ */
+  background-color: white;
+}
+
+/*@1:下記はjsxファイルの方で.level1Containerを取り寄せているタグ内のh1タグに反映されるスタイルを指定しているクラス*/
+.title {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/*@1:下記はjsxファイルの方で.level1Containerを取り寄せているタグ内のbuttonタグに反映されるスタイルを指定しているクラス*/
+.button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/*@1:下記はjsxファイルの方で.level1Containerを取り寄せているタグ内のbuttonの上にカーソルを持っていった際のレイアウトを指定しているクラス*/
+.button:hover {
+  background-color: #0056b3;
+}
