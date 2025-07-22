@@ -1,0 +1,26 @@
+.centerContent {
+  display: flex;
+  flex-direction:  column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  /*height: calc(100vh - 140px); /* ボタンとの干渉を避けるために調整 */
+  padding: 10px;
+  background-color: #ffffff;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.item {
+  font-size: 24px;
+  margin: 10px 0;
+  padding: 2px;
+  border: var(--border-width) solid #ccc;
+  box-sizing: border-box;
+  height: 20px;         /* 縦の長さ */
+  width: 200px;          /* 横の長さ */
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+

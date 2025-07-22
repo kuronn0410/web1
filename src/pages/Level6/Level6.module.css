@@ -1,0 +1,61 @@
+
+:root {
+  --border-width: 2px; /* 枠の太さを変えたいときに使える変数 */
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.level6Container {
+   position: relative;
+  height: 100vh;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;     /* 上下中央 */
+  align-items: center;         /* 左右中央 */
+  gap: 40px;
+  padding-top: 100px;          /* ボタンと重ならないように調整 */
+}
+
+.topbutton,
+.bottombutton {
+  position: absolute;
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.topbutton {
+  top: 10px;
+  left: 80px;
+}
+
+.bottombutton {
+  top: 10px;
+  right: 80px;
+}
+
+.topbutton:hover,
+.bottombutton:hover {
+  background-color: #0056b3;
+}
+
+.set{
+   display: flex;
+  justify-content: center;
+  align-items: center; 
+  gap: 10px; 
+  
+}
+

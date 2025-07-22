@@ -5,6 +5,7 @@ import  Header from '../../components/Header/Header.jsx'
 
 const Level4 = () => {
   const navigate = useNavigate()
+  const items = ['あ', 'い', 'う']; 
 
   //const handleClick = () => {
   //}
@@ -12,18 +13,20 @@ const Level4 = () => {
   return (
     <div>
       <Header title="レベル４" subtitle="これはヘッダーのサンプルです" />
-    <div className={styles.level4Container}>
-      {/*@2: 上記のdivタグはimportしているCSSファイル内のlevel2Containerクラス
-      のレイアウトがdivで囲っている範囲内全てに反映されるようにしている。
-      ちなみにその際、level2Container内には横並びにするコードが書かれているためこの画面ではボタンが横並びで表示される*/}
-      <button className={styles.button} onClick={() => {
-        navigate('/sausage')
+      <div className={styles.level4Container}>
+        <button className={styles.topbutton} onClick={() => {
+          navigate('/sausage')
 
-      }}>レベル3へ</button>
-      <button className={styles.button} onClick={() =>{
-        navigate('/unko')
-      }}>レベル5へ</button>
+        }}>レベル3へ</button>
+        <button className={styles.bottombutton} onClick={() =>{
+          navigate('/unko')
+        }}>レベル5へ</button>
 
+        <div className={styles.centerContent}>
+        {items.map((items, index) => (
+          <div key={index}className={styles.item}>{items}</div>
+        ))}
+        </div>
       </div>
     </div>
   )

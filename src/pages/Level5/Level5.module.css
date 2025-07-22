@@ -1,17 +1,26 @@
-/*@2: 横並びにしたい時はflex-direction: rowのレイアウトの入った下記のような.level2Containerというクラスをjsxファイル内のタグで呼び出せばOK*/
-.level5Container {
-  display: flex;
-  flex-direction: row;       /* 横並びに変更 */
-  align-items: center;       /* 垂直方向中央 */
-  justify-content: center;   /* 水平方向中央 */
-  gap: 20px;                 /* ボタン間の余白 */
-  height: 100vh;             /* 全画面高さ */
-  background-color: white;
+
+:root {
+  --border-width: 2px; /* 枠の太さを変えたいときに使える変数 */
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  box-sizing: border-box;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/*@2: ボタンのスタイルを統一するために共通のクラスを作成*/
-.button {
+.level5Container {
+  position: relative;
+  padding-top: 100px;
+  height: 100vh;
+  background-color: white;
+}
+
+.topbutton,
+.bottombutton {
+  position: absolute;
   padding: 10px 20px;
   font-size: 1rem;
   background-color: #007bff;
@@ -22,7 +31,53 @@
   transition: background-color 0.3s ease;
 }
 
-/*@2: ボタンの上にカーソルを持っていった際のスタイル変更*/
-.button:hover {
+.topbutton {
+  top: 10px;
+  left: 80px;
+}
+
+.bottombutton {
+  bottom: 10px;
+  right: 80px;
+}
+
+.topbutton:hover,
+.bottombutton:hover {
   background-color: #0056b3;
+}
+
+.centerContent {
+  display: flex;
+  flex-direction: row;
+ 
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  height: calc(100vh - 140px); /* ボタンとの干渉を避けるために調整 */
+  padding: 20px;
+  /*border: var(--border-width) solid #ccc;
+  border-radius: 8px;
+  /*box-sizing: border-box;*/
+  background-color: #ffffff;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.item {
+  font-size: 24px;
+  margin: 10px 0;
+  padding: 2px;
+  border: var(--border-width) solid #ccc;
+  box-sizing: border-box;
+  height: 50px;         /* 縦の長さ */
+  width: 200px;          /* 横の長さ */
+  justify-content: center;
+  display: flex;
+}
+
+.row {
+  
+  display: flex;
+   flex-direction: column;
+  gap: 20px;
 }
