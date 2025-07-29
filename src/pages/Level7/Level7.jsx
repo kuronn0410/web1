@@ -16,10 +16,13 @@ const Level7 = () => {
       <div className={styles.level7Container}>
         <div className={styles.set}>
           <Items items={itemList} />
+          
         </div>
-
+        <button className={styles.topbutton} onClick={() => navigate('/onani')}>
+          閉じる▲
+        </button>
         <div className={styles.buttonRow}>
-          <button className={styles.topbutton} onClick={() => navigate('/onani')}>
+          <button className={styles.topbutton} onClick={() => navigate('/eghit')}>
             レベル8へ
           </button>
           <button className={styles.imageButton}>画像</button>

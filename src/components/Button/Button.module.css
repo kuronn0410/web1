@@ -1,0 +1,24 @@
+.topbutton {
+  width: 250px;
+  height: 50px; 
+  padding: 10px 15px;
+  font-size: 1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 100px / 80px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.topbutton:hover {
+  background-color: #0056b3;
+}
+
+.buttonVer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0px;
+}
