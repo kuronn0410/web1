@@ -1,0 +1,59 @@
+
+:root {
+  --border-width: 2px;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.level13Container {
+  position: static;
+  height: 100vh;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  padding-top: 100px;
+}
+
+.header{
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  flex-direction: column;
+}
+
+.txtsenter{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buttonin{
+   width: 200px;
+  height: 100px; 
+  border-radius: 100px / 20px;
+  border: 2px double black;
+  background-color: #14da0d;
+}
+
+.buttonget{
+  width: 300px;
+  height: 100px; 
+  border:100px;
+  border: 2px double black;
+  background-color: #1b80eb;
+}
+
+.valueDisplay{
+  width: 150px;
+  height: 30px; 
+  border:100px;
+  border: 2px double black;
+}

@@ -12,6 +12,8 @@ import Level9 from './pages/Level9/Level9'
 import Level10 from './pages/Level10/Level10'
 import Level11 from './pages/Level11/Level11'
 import Level12 from './pages/Level12/Level12'
+import Level13 from './pages/Level13/Level13'
+import Level14 from './pages/Level14/Level14'
 
 
 // 必要に応じて他の Level ページもインポート
@@ -33,6 +35,8 @@ export default function App() {
         <Route path="/ten" element={<Level10 />} />
         <Route path="/eleven" element={<Level11 />} />
         <Route path="/twelve" element={<Level12 />} />
+        <Route path="/thirteen" element={<Level13 />} />
+        <Route path="/fourteen" element={<Level14 />} />
         {/* 他のルートも必要に応じて追加 */}
       </Routes>
     </BrowserRouter>

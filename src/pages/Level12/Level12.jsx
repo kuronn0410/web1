@@ -1,27 +1,31 @@
-import { useNavigate } from 'react-router-dom'
 import styles from './Level12.module.css'; 
+import { useNavigate } from 'react-router-dom'
 import { useLocation } from 'react-router-dom';
 import { useState } from 'react';
-import Button2 from '../../components/Button2/Button2.jsx'
 
 
 const Level12 = () => {
-  const navigate = useNavigate();
 
+  const navigate = useNavigate();
   const location = useLocation();
   const level12Value = location.state?.level12;
+
   const [inputs, setInputs] = useState([]);
   const handleAddInput = () => {
-    setInputs((prev) => [...prev, '']); // 空の入力欄を1つ追加
+    setInputs((prev) => [...prev, '']);
   };
-
-   const handleInputChange = (index, value) => {
+  const handleInputChange = (index, value) => {
     setInputs((prev) => {
       const newInputs = [...prev];
       newInputs[index] = value;
       return newInputs;
     });
   };
+  const handleRemoveInput = (index) => {
+  setInputs((prev) => prev.filter((_, i) => i !== index));
+  };
+
+
 
   return (
     <>
@@ -42,21 +46,34 @@ const Level12 = () => {
         </h1>
         <div className={styles.inputsWrapper}>
           {inputs.map((value, idx) => (
-            <input
-              key={idx}
-              type="text"
-              value={value}
-              onChange={(e) => handleInputChange(idx, e.target.value)}
-              className={styles.dynamicInput}
-              placeholder={`入力${idx + 1}`}
-            />
+            <div key={idx} className={styles.inputGroup}>
+              <input
+                key={idx}
+                type="text"
+                value={value}
+                onChange={(e) => handleInputChange(idx, e.target.value)}
+                className={styles.dynamicInput}
+                placeholder={`入力${idx + 1}`}
+              />
+              <button
+              onClick={() => handleRemoveInput(idx)}
+              className={styles.removeButton}
+              >
+              削除
+              </button>
+            </div>
           ))}
         </div>
          <p>現在の入力欄数: {inputs.length}</p>
-        <Button2
-        button2={'レベル１３'}
-        path={'/eleven'}
-        />
+        <button
+          className={styles.toLevel13Button}
+          onClick={() => {
+          localStorage.setItem('level12Inputs', JSON.stringify(inputs));
+          navigate('/thirteen');
+          }}
+        >
+          レベル１３へ
+        </button>
       </div>
     </>
   );
